@@ -18,13 +18,14 @@
   showtext_auto()
   
   ## ggplot theme
-  mytheme = theme_minimal(base_size = 11) +
+  mytheme = theme_classic(base_size = 11) +
     theme(
       text=element_text(family = 'Noto Sans'),
       plot.title = element_text(face = 'bold'),
       panel.grid.minor = element_blank(),
       panel.grid.major = element_blank(),
       axis.text = element_blank(),
+      axis.ticks = element_blank(),
       plot.title.position = 'plot',
       plot.margin=unit(c(.2,.2,.2,.2),"cm")
     )
@@ -85,8 +86,8 @@
     scale_y_continuous(limits = c(0,1), breaks = c(0,.5,1)) +
     scale_x_continuous(breaks = c(0,.5,1),
                        labels = c('Worse','Same','Better')) +
-    labs(y = 'Pr(Vote|INC)',
-         x = 'Economy, past year',
+    labs(y = 'Pr(Vote = Inc)',
+         x = 'Economy (worse -- better)',
          title = 'Voters * Parties * Elections', 
          subtitle = 'ME logit, n = 875,445, k = 103') +
     mytheme
@@ -130,15 +131,20 @@
   "
   
   ## Arrange
-  rvplot = p1 + p2 + p3 + 
-    plot_layout(design = layout) &
+  cplot = p1 + p2 &
     theme(plot.margin = margin(4,4,6,4, unit = 'pt'))
   
   ## Export
   ggsave(
-    filename ='figures/rvplot.svg',
-    plot = rvplot,
-    height = 5, width = 7, dpi = 900
+    filename ='figures/xnatplot.svg',
+    plot = cplot,
+    height = 3, width = 5, dpi = 900
+  )
+  
+  ggsave(
+    filename = 'figures/mxplot.svg',
+    plot = p3,
+    height = 3, width = 4, dpi = 900
   )
 
 # Chap 4 ------------------------------  
@@ -175,8 +181,7 @@
     geom_smooth(method = "glm", 
                 method.args = list(family = "binomial"), 
                 color = '#00204DFF') +
-    labs(x = "Average output", y = "Vote to reappoint (pr)", 
-         title = 'Response to treatment') +
+    labs(x = "Average output", y = "Prob reappoint") +
     scale_x_continuous(limits = c(800,1600), breaks = c(900,1200,1500)) +
     scale_y_continuous(breaks = seq(0,1,0.5), limits = c(0,1)) +
     mytheme + theme(legend.position = 'none',
@@ -189,8 +194,8 @@
   # Export
   ggsave(
     filename ='figures/study1sum.svg',
-    plot = study1sum,
-    height = 5, width = 6, dpi = 400
+    plot = b,
+    height = 3, width = 4, dpi = 400
   )
   
   rm(a,b,study1sum)
@@ -610,8 +615,7 @@
     labs(
       x = NULL,
       y = NULL,
-      fill = 'Task design',
-      title = 'Combined selection'
+      fill = 'Task design'
     ) +
     scale_fill_viridis_d(option = 'inferno', direction = 1) +
     scale_y_continuous(breaks = seq(0, 100, 50),
@@ -621,22 +625,21 @@
     mytheme +
     theme(
       plot.title.position = 'plot',
-      legend.position = 'none',
+      legend.position = 'top',
       axis.text.y = element_text(),
-      axis.text.x = element_text(vjust = grid::unit(c(0, -2, 0), "points"))
+      axis.text.x = element_text()
     )
   
   # Patchwork
   layout = "
-    AAAA
-    BBBC
+    AAB
   "
-  (study8sum = v8a + v8b + guide_area() + plot_layout(design = layout, guides = 'collect'))
+  (study8sum = v8b + guide_area() + plot_layout(design = layout, guides = 'collect'))
   
   ggsave(
     filename ='figures/study8sum.svg',
-    plot = study8sum,
-    height = 5, width = 6, dpi = 400
+    plot = v8b,
+    height = 3, width = 4, dpi = 400
   )
 
   rm(v8a,v8b,study8sum,a,b,layout,c6,c6f)  

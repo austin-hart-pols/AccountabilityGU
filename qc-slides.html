@@ -40,6 +40,93 @@ class: center, middle, inverse, title-slide
 
 
 
+# Quality Control (2023, Cambridge) 
+  
+
+.pull-left-1[
+&amp;nbsp;
+
+.center[&lt;img src="figures/qcontrol.png" width="290"&gt;]
+
+]
+
+.pull-right2[
+&amp;nbsp;
+
+|&lt;img src="figures/hart.jpeg" width="190"&gt;   | Austin Hart | American &lt;br&gt; University|
+|:-------------------------:|:-------------------------:|:---------------:|
+|&lt;img src="figures/scott.jpg" width="200"&gt;   |  Scott Matthews | Memorial &lt;br&gt; University|
+
+
+
+]
+
+---
+# Retrospective voting
+
+.left-column[
+
+### Foundational
+
+]
+
+.right-column[
+
+  
+&gt; Citizens hold governments accountable for their performance in office.
+&gt; They reward good outcomes and sanction poor outcomes.  
+&gt; *Downs (1957), Fiorina (1981)*
+
+
+- Requires voters to...
+  - integrate and appraise performance info  
+  - Apply their judgment to vote choice   
+- Ex: good economy and incumbent electoral success 
+
+]
+
+---
+# Retrospective voting
+
+.left-column[
+
+### Foundational
+
+### Ubiquitous-ish
+
+]
+
+.right-column[
+
+&lt;img src="figures/xnatplot.svg" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+# Retrospective voting
+
+.left-column[
+
+### Foundational
+
+### Ubiquitous-ish
+
+### Causal
+
+]
+
+.right-column[
+- `\(\Delta RetroEval_{i} \rightarrow \Delta Pr(Vote_{i} = Inc)\)`
+  - Hart (2013, **2016**)   
+  - Hart &amp; Middleton (2015)    
+  - Lenz (2012)
+  
+.center[![](figures/mxplot.svg)]
+
+]
+
+
+---
 # Retrospective voting
 
 .left-column[
@@ -54,7 +141,13 @@ class: center, middle, inverse, title-slide
 ]
 
 .right-column[
-.center[![](figures/rvplot.svg)]
+
+- Evidence consistent with pessimistic alternative  
+- Blind retrospection 
+  - Judgment is myopic, emotional  
+  - Cannot identify incumbent effort  
+  - Performance voting = kicking the dog (Achen &amp; Bartels 2016)
+
 ]
 
 
@@ -71,22 +164,6 @@ class: center, middle, inverse, title-slide
 - But I/A largely unseen
   - Uncommon focus of theory
   - Obs &amp; Exp limitations
-
-
----
-# Past experiments short-circuit I/A
-
-&amp;nbsp;
-&lt;blockquote&gt;
-Experts say that not only have economic conditions deteriorated a lot over the last year, but the British economy is doing considerably worse that most other countries.
-.right[-- Tilly &amp; Hobolt, 2011]
-&lt;/blockquote&gt;
-
-- Vignette provides 
-  - pre\-integrated summary
-  - explicit appraisal cue  
-  
-- Have yet to study I/A in controlled setting
 
 
 ---
@@ -120,14 +197,15 @@ class: segue-yellow
 # Experimental framework
 
 .pull-left-1[
-- Supervise new worker 
-  - Fully\-trained 
+
+- Monitor new worker
+- Vote to reappoint/replace
+- Bonus `\(\propto\)` factory output
+- Worker is fully\-trained but 
   - Type unknown, &lt;br&gt; `\(\mu_{inc} \sim U(950,1450)\)`
   - Output variable, &lt;br&gt; `\(Y_{inc,t} \sim N(\mu_{inc},250^2)\)`  
   
-- Monitor for 16 'weeks'
-- Vote to reappoint/replace 'Incumbent'
-- Bonus `\(\propto\)` factory output
+
 
 ]
 
@@ -168,7 +246,7 @@ class: segue-yellow
 - N = 764
 
 - Key design elements
-  - Fixed type/output
+  - Fixed output
   - Randomize timing of "drop"
   
 - Findings
@@ -188,26 +266,10 @@ class: segue-yellow
 # Confronting spillover in I/A
 
 
----
-# Strategies for managing spillover
-
-### How--and how well--do voters differentiate competence from luck? 
-
-- Blind retrospection (Achen &amp; Bartels 2016)  
-  - No accounting for spillover
-  - RV as myopic, indiscriminant displacement
-
-- Rational discounting (Duch &amp; Stevenson 2008) 
-  - Voters discount by variance of spillover
-  - RV as sophisticated signal extraction
-  
-- Benchmark comparison (Kayser &amp; Peress 2012)  
-  - Competence in relative performance gap
-  - RV as low-info "social comparison" 
-
 
 ---
 # Multiworker designs
+### Can voters differentiate competence from luck? 
 
 .pull-left-1[
 ### Game Flow
@@ -221,23 +283,6 @@ class: segue-yellow
 .pull-right-2[
 &lt;img src="figures/multidesign.svg" width="550px" style="display: block; margin: auto;" /&gt;
 ]
-
-
----
-# Estimation and predictions
-
-
-&amp;nbsp;
-
-`$$Reappoint_i = \alpha F_{pre,i} + \beta F_{post,i} + \theta + u_i$$`
-
-### Model predictions
-
-| Strategy       | Pre-Inc, `\(F_{pre}\)`  | Inc tenure, `\(F_{post}\)`   |
-|:---------------|---------------------|--------------------------|
-| Blind retrospection  | `\(\alpha &gt; 0\)` | `\(\beta&gt;0\)`      |
-| Rational discounting | `\(\alpha = 0\)` | `\(\beta&gt;0\)`, `\(\beta=f(\kappa)\)`  |
-| Benchmark comparison | `\(\alpha &lt; 0\)` | `\(\beta&gt;0\)` |
 
 
 ---
@@ -260,27 +305,6 @@ class: segue-yellow
 .pull-right-2[
 &lt;img src="figures/study5sum.svg" width="550px" style="display: block; margin: auto;" /&gt;
 ]
-
----
-# Consistent benchmark response
-
-&amp;nbsp;
-
-`$$Reappoint_i = \alpha F_{pre,i} + \beta F_{post,i} + \theta + u_i$$`
-
-
-### Estimates of I/A under interdependence
-
-| Study |	Design (n)  | `\(\hat{\alpha}\)` | `\(Pr(\alpha \geq 0)\)`  | `\(\hat{\beta}\)` | `\(Pr(\beta \leq 0)\)` |
-|-------|:------------|----------|--------|---------|---------|
-| 5	| Unmasking (819) |	-0.093 |	&lt; 0.001 |	0.135	| &lt; 0.001 |
-| 6	| Recognition (368) |	-0.055 |	&lt; 0.001 |	0.123	| &lt; 0.001 |
-| 7	| Unmasking (550) |	-0.114 |	&lt; 0.001	| 0.158	| &lt; 0.001 |
-| 8	| Unmasking arm (173) |	-0.129 |	&lt; 0.001 |	0.151	| &lt; 0.001 |
-|	  | Recognition arm (217) |	-0.065 |	&lt; 0.001 |	0.153	| &lt; 0.001 |
-| 9	| Unmasking arm (894)	| -0.138 |	&lt; 0.001	| 0.192	| &lt; 0.001 |
-| 	| Recognition arm (182) |	-0.047 |	&lt; 0.001 |	0.156	| &lt; 0.001 |
-| 11 |	Dual stream (918) |	-0.182 |	&lt; 0.001	| 0.131	| &lt; 0.001 |
 
 
 
@@ -394,21 +418,19 @@ realism, some—but not all!—laboratory and survey experiments do not and thus
 ---
 class: sydney-red
 
-# *Quality Control* and next steps
+# *Quality Control* and beyond
 
 - Integration-appraisal framework
   - I/A *necessary* for RV
-  - Should be focus of theory
   - Allowed to unfold in controlled settings
   
 - Findings from 11 experimental tests
   - Capacity beyond blind retrospection
-  - Sophistication below rational discounting
   - Strategic, imperfect benchmarking 
 
 - Next steps  
   - Appraise first, integrate later
-  - Role of appraisal cues in I/A
+  - Locating negativity bias
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
