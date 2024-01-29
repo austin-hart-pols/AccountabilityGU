@@ -52,6 +52,26 @@ To specify the margin of the first title h1
 }
 
 
+/*.columns { display: flex; }*/
+
+.pull-left {
+  padding-top: 0px;
+}
+
+.pull-left-narrow {
+  float: left;
+  width: 20%;
+}
+
+.pull-right-wide {
+  float: right;
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.pull-right-wide + * { clear: both; }
+
+
 /* use to position text at the bottom */
 .pull-down {
   position: absolute;

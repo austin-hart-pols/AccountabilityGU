@@ -1,7 +1,8 @@
 ---
 title: "Can voters hold governments accountable for past economic performance?"
 author: "Austin Hart"
-date: "American University"
+institute: "American University"
+date: ahart@american.edu
 output:
   xaringan::moon_reader:    
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -34,25 +35,43 @@ output:
   library(knitr)
 ```
 
-# Quality Control (2023, Cambridge) 
+
+
+# Research and Acknowledgements 
   
 
-.pull-left-1[
-&nbsp;
-
-.center[<img src="figures/qcontrol.png" width="290">]
-
+.pull-left-narrow[
+  .center[<img src="figures/qcontrol.png" width="120">]
 ]
 
-.pull-right2[
-&nbsp;
+.pull-right-wide[
+Research presented here published in:  
 
-|<img src="figures/hart.jpeg" width="190">   | Austin Hart | American <br> University|
-|:-------------------------:|:-------------------------:|:---------------:|
-|<img src="figures/scott.jpg" width="200">   |  Scott Matthews | Memorial <br> University|
+- *Quality Control* (2023), Cambridge University Press
+
+- "Unmasking Competence" (2022) *Journal of Politics*
+]
 
 
 
+.pull-left-narrow[
+  .center[<img src="figures/hart.jpeg" width="90"> ]
+]
+
+.pull-right-wide[
+  **Austin Hart**, ahart@american.edu  
+  Associate Prof of Politics, Governance, and Economics  
+  American University
+]
+
+.pull-left-narrow[
+  .center[<img src="figures/scott.jpg" width="90"> ]
+]
+
+.pull-right-wide[
+  **J. Scott Matthews**, scott.matthews@mun.ca  
+  Professor of Political Science  
+  Memorial University
 ]
 
 ---
