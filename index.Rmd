@@ -1,5 +1,5 @@
 ---
-title: "Can voters hold governments accountable for past economic performance?"
+title: "Can voters hold governments accountable <br> for past performance?"
 author: "Austin Hart"
 institute: "American University"
 date: ahart@american.edu
@@ -87,7 +87,8 @@ Research presented here published in:
 
   
 > Citizens hold governments accountable for their performance in office.
-> They reward good outcomes and sanction poor outcomes.  
+> They reward good outcomes and sanction poor outcomes. 
+> 
 > *Downs (1957), Fiorina (1981)*
 
 
